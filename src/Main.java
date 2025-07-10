@@ -13,7 +13,9 @@ public class Main {
             System.out.println("======================");
             System.out.println("1 - Add Remnant");
             System.out.println("2 - View All Remnants");
-            System.out.println("3 - Exit");
+            System.out.println("3 - Remove Remnant (by Name)");
+            System.out.println("4 - Remove Remnant (by ID)");
+            System.out.println("5 - Exit");
             System.out.print("Choose an option: ");
 
             String input = scanner.nextLine();
@@ -28,6 +30,12 @@ public class Main {
                     manager.displayAll();
                     break;
                 case "3":
+                    manager.removeRemnant(); //by name
+                    break;
+                case "4":
+                    manager.removeRemnantById(); //by ID
+                    break;
+                case "5":
                     System.out.println("Exiting... Goodbye!");
                     scanner.close();
                     return; // Ends the program
